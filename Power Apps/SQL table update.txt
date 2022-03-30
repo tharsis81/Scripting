@@ -1,0 +1,18 @@
+#######
+naredi update vrstic ki so se spremenile
+primer: powerapps.com (anze.pirc@add.si)
+
+#######
+
+ForAll(Filter(Gallery1_1.AllItems, Toggle1.Value = true),
+Patch(
+    Classifications, ThisRecord,
+    {
+        CustomerClassification: TextInput2_1.Text,
+        Y1: Value(TextInput3_1.Text),
+        Y2: Value(TextInput4_1.Text),
+        Y3: Value(TextInput5_1.Text)
+    }
+)
+)
+
